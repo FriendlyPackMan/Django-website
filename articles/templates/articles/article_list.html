@@ -1,7 +1,7 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-<h1>Articles:</h1>
+<h1>Articles</h1>
 <div class="articles">
     {% for article in articles%}
         <div class="article">
@@ -12,7 +12,9 @@
         </div>
     {% endfor %}
 </div>
-<a href="..">Home</a>
-<a href="../admin">Admin</a>
-<a href="../about">About</a>
+<div class="links">
+    <a href="..">Home</a>
+    <a href="../admin">Admin</a>
+    <a href="../about">About</a>
+</div>
 {% endblock %}
