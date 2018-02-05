@@ -1,9 +1,26 @@
+{% load static from staticfiles%}
+
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="ua">
     <head>
         <meta charset="UTF-8">
+        <title>Articles page</title>
+        <link rel="stylesheet" href="{% static 'style.css'%}">
     </head>
     <body>
         <h1>Article</h1>
+        <div class="articles">
+            {% for article in articles%}
+                <div class="article">
+                    <h2><a href="#">{{article.title}}</a></h2>
+                    <p>{{article.slug}}</p>
+                    <p>{{article.snippet}}</p>
+                    <p>{{article.date}}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="..">Home</a>
+        <a href="../admin">Admin</a>
+        <a href="../about">About</a>
     </body>
 </html>
